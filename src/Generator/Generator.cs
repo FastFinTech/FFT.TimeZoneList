@@ -24,8 +24,7 @@ namespace Generator
         Debugger.Launch();
       }
 
-      var result = @"
-namespace FFT.TimeZoneList
+      var result = @"namespace FFT.TimeZoneList
 {
   using System;
   using TimeZoneConverter;
@@ -65,8 +64,7 @@ namespace FFT.TimeZoneList
         while (name.EndsWith("_"))
           name = name.Substring(0, name.Length - 1);
 
-        var doc = $@"
-    /// <summary>
+        var doc = $@"    /// <summary>
     /// Gets the timezone: {tz.ToString()}. [{tz.Id}]{(tz.SupportsDaylightSavingTime ? " (Supports Daylight Saving Time)" : string.Empty)}.
     /// Returns <c>null</c> if the timezone is not installed on the current system.
     /// </summary>";
@@ -84,7 +82,7 @@ namespace FFT.TimeZoneList
         .OrderBy(x => x.property)
         .Select(x => x.doc + Environment.NewLine + x.property);
 
-      result = result.Replace("[items]", string.Join(Environment.NewLine, items));
+      result = result.Replace("[items]", string.Join(Environment.NewLine + Environment.NewLine, items));
 
       context.AddSource("TimeZones.cs", result);
     }
