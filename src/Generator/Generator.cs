@@ -17,12 +17,14 @@ namespace Generator
 
     public void Execute(GeneratorExecutionContext context)
     {
+#if DEBUG
       if (context.AnalyzerConfigOptions.GlobalOptions.TryGetValue("build_property.DebugSourceGenerators", out var debugValue) &&
           bool.TryParse(debugValue, out var shouldDebug) &&
           shouldDebug)
       {
         Debugger.Launch();
       }
+#endif
 
       var result = @"namespace FFT.TimeZoneList
 {
@@ -83,6 +85,14 @@ namespace Generator
         .Select(x => x.doc + Environment.NewLine + x.property);
 
       result = result.Replace("[items]", string.Join(Environment.NewLine + Environment.NewLine, items));
+
+      
+
+      Console.Error.WriteLine("=============================");
+      Console.Error.WriteLine(result);
+      Console.Error.WriteLine("=============================");
+
+      
 
       context.AddSource("TimeZones.cs", result);
     }
