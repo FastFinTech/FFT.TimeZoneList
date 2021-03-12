@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5</TargetFramework>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
+    <DebugSourceGenerators>false</DebugSourceGenerators>
+
+    <PackageId>FFT.TimeZoneList</PackageId>
+    <Summary>A hard-code list of TimeZoneInfo references.</Summary>
+    <Description>$(Summary)</Description>
+    <Company>True Goodwill</Company>
+    <Authors>True Goodwill</Authors>
+    <PackageProjectUrl>https://github.com/FastFinTech/FFT.Market</PackageProjectUrl>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>trading</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <CompilerVisibleProperty Include="DebugSourceGenerators" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TimeZoneConverter" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Generator\Generator.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+  </ItemGroup>
+
+</Project>
