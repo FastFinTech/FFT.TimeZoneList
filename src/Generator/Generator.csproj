@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <!-- This copies the TimeZoneConverter dependency into the output folder so
 it is available for use by the generator when running in other projects-->
-    <!--<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>-->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,9 +21,5 @@ it is available for use by the generator when running in other projects-->
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.1" PrivateAssets="all" />
     <PackageReference Include="TimeZoneConverter" Version="3.4.0" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet publish &quot;$(ProjectFileName)&quot; --no-build -o pub&#xD;&#xA;xcopy &quot;$(ProjectDir)pub/TimeZoneConverter.dll&quot; &quot;$(OutDir)&quot; /Y&#xD;&#xA;" />
-  </Target>
 
 </Project>

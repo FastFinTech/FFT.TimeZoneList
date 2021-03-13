@@ -9,6 +9,9 @@
     <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
     <DebugSourceGenerators>false</DebugSourceGenerators>
 
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+
     <PackageId>FFT.TimeZoneList</PackageId>
     <Summary>A hard-code list of TimeZoneInfo references.</Summary>
     <Description>$(Summary)</Description>
