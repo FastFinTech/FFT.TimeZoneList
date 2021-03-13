@@ -23,7 +23,7 @@ it is available for use by the generator when running in other projects-->
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet publish &quot;$(ProjectFileName)&quot; --no-build -o pub&#xD;&#xA;xcopy &quot;$(ProjectDir)pub\TimeZoneConverter.dll&quot; &quot;$(OutDir)&quot; /Y&#xD;&#xA;" />
+    <Exec Command="dotnet publish &quot;$(ProjectFileName)&quot; --no-build -o pub&#xD;&#xA;xcopy &quot;$(ProjectDir)pub/TimeZoneConverter.dll&quot; &quot;$(OutDir)&quot; /Y&#xD;&#xA;" />
   </Target>
 
 </Project>
