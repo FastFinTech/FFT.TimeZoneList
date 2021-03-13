@@ -7,6 +7,7 @@ namespace Generator
   using System.Diagnostics;
   using System.Linq;
   using Microsoft.CodeAnalysis;
+  using TimeZoneConverter;
 
   [Generator]
   public class TimeZoneListGenerator : ISourceGenerator
@@ -53,9 +54,22 @@ namespace Generator
 }
 ";
 
+      //foreach(var tz in TimeZoneInfo.GetSystemTimeZones())
+      //{
+      //  var name = Environment.OSVersion.Platform.ToString().StartsWith("Win")
+      //    ? tz.Id
+      //    : TZConvert.IanaToWindows(tz.Id);
+      //}
+
       var items = TimeZoneInfo.GetSystemTimeZones().Select(tz =>
       {
-        var name = tz.Id
+        var name = Environment.OSVersion.Platform.ToString().StartsWith("Win")
+          ? tz.Id
+          : TZConvert.IanaToWindows(tz.Id);
+
+        //var name = tz.Id;
+
+        name = name
             .Replace(" ", string.Empty)
             .Replace(".", string.Empty)
             .Replace("(", "_")
@@ -86,13 +100,13 @@ namespace Generator
 
       result = result.Replace("[items]", string.Join(Environment.NewLine + Environment.NewLine, items));
 
-      
+
 
       Console.Error.WriteLine("=============================");
       Console.Error.WriteLine(result);
       Console.Error.WriteLine("=============================");
 
-      
+
 
       context.AddSource("TimeZones.cs", result);
     }

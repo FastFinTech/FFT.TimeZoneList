@@ -3,6 +3,7 @@
 
 namespace FFT.TimeZoneList.Tests
 {
+  using System;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
   using TimeZoneConverter;
 
@@ -12,6 +13,13 @@ namespace FFT.TimeZoneList.Tests
     [TestMethod]
     public void TestMethod1()
     {
+      foreach (var tz in TimeZoneInfo.GetSystemTimeZones())
+      {
+        var name = Environment.OSVersion.Platform.ToString().StartsWith("Win")
+          ? tz.Id
+          : TZConvert.IanaToWindows(tz.Id);
+      }
+
       Assert.IsNotNull(TimeZones.EasternStandardTime);
     }
   }
