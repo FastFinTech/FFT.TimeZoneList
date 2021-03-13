@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FFT.TimeZoneList", "FFT.Tim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "Generator\Generator.csproj", "{6B97D915-675D-43E3-B019-192ACFDCA13C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FFT.TimeZoneList.Tests", "FFT.TimeZoneList.Tests\FFT.TimeZoneList.Tests.csproj", "{9DDBD0BD-6004-4ACB-AF2A-A6B95E328CF6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{EEE13ECD-E305-405D-87CE-1A509FD8F1F4}"
 	ProjectSection(SolutionItems) = preProject
 		..\.editorconfig = ..\.editorconfig
@@ -36,10 +34,6 @@ Global
 		{6B97D915-675D-43E3-B019-192ACFDCA13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B97D915-675D-43E3-B019-192ACFDCA13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B97D915-675D-43E3-B019-192ACFDCA13C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DDBD0BD-6004-4ACB-AF2A-A6B95E328CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DDBD0BD-6004-4ACB-AF2A-A6B95E328CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DDBD0BD-6004-4ACB-AF2A-A6B95E328CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DDBD0BD-6004-4ACB-AF2A-A6B95E328CF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
