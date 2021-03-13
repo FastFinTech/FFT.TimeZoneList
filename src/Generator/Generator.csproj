@@ -4,22 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
-    <!-- This copies the TimeZoneConverter dependency into the output folder so
-it is available for use by the generator when running in other projects-->
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="pub\**" />
-    <EmbeddedResource Remove="pub\**" />
-    <None Remove="pub\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.1" PrivateAssets="all" />
-    <PackageReference Include="TimeZoneConverter" Version="3.4.0" />
   </ItemGroup>
 
 </Project>
