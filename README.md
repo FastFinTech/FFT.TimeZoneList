@@ -28,7 +28,3 @@ public class MyDTO
   public TimeZoneInfo TimeZone { get; set; }
 }
 ```
-
-### Developer note
-
-The code (all boiler-plate) is source-generated. I wasn't able to get the source generation working cross-platform and on Github actions in the time I had available, so to update, I just build it on my local Windows dev machine and the code-gen works, creating a temp file. I manually copy the content of that file to `TimeZones.cs`, editing the class name and then commit/push.

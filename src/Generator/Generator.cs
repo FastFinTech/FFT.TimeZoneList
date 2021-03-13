@@ -71,7 +71,7 @@ namespace Generator
   /// <summary>
   /// Contains hard-coded TimeZoneInfo references.
   /// </summary>
-  public sealed class TimeZonesGen
+  public sealed class TimeZones
   {
 [fields]
 [properties]
