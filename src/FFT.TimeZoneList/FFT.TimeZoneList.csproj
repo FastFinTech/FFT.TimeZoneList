@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
-    <DebugSourceGenerators>true</DebugSourceGenerators>
+    <DebugSourceGenerators>false</DebugSourceGenerators>
 
     <PackageId>FFT.TimeZoneList</PackageId>
     <Summary>A hard-code list of TimeZoneInfo references.</Summary>
