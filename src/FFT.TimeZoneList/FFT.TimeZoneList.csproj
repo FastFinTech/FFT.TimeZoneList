@@ -8,6 +8,7 @@
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
     <DebugSourceGenerators>false</DebugSourceGenerators>
+    <NoWarn>SA1633</NoWarn>
 
     <PackageId>FFT.TimeZoneList</PackageId>
     <Summary>A hard-code list of TimeZoneInfo references.</Summary>

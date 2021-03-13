@@ -63,7 +63,8 @@ namespace Generator
         };
       }).ToList();
 
-      var result = @"namespace FFT.TimeZoneList
+      var result = @"#pragma warning disable SA1633
+namespace FFT.TimeZoneList
 {
   using System;
   using TimeZoneConverter;
@@ -71,6 +72,7 @@ namespace Generator
   /// <summary>
   /// Contains hard-coded TimeZoneInfo references.
   /// </summary>
+  [System.CodeDom.Compiler.GeneratedCode("""", """")]
   public sealed class TimeZones
   {
 [fields]
