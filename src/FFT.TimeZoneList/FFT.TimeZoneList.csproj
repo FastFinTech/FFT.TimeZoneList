@@ -15,7 +15,7 @@
     <Description>$(Summary)</Description>
     <Company>True Goodwill</Company>
     <Authors>True Goodwill</Authors>
-    <PackageProjectUrl>https://github.com/FastFinTech/FFT.Market</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/FastFinTech/FFT.TimeZoneList</PackageProjectUrl>
     <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>trading</PackageTags>
