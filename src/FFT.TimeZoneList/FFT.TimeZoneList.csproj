@@ -11,7 +11,7 @@
     <NoWarn>SA1633</NoWarn>
 
     <PackageId>FFT.TimeZoneList</PackageId>
-    <Summary>A hard-code list of TimeZoneInfo references.</Summary>
+    <Summary>A hard-code list of TimeZoneInfo references. Also see the related FFT.TimeStamps package.</Summary>
     <Description>$(Summary)</Description>
     <Company>True Goodwill</Company>
     <Authors>True Goodwill</Authors>

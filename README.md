@@ -6,6 +6,8 @@ package](https://img.shields.io/nuget/v/FFT.TimeZoneList.svg)](https://nuget.org
 
 Provides hard-typed references to timezones. Works cross-platform thanks to internal use of the `TimeZoneConverter` package.
 
+Also see the related [`FFT.TimeStamps`](https://github.com/FastFinTech/FFT.TimeStamps) project.
+
 ```csharp
 using FFT.TimeZoneList;
 TimeZoneInfo _est = TimeZones.EasternStandardTime;
