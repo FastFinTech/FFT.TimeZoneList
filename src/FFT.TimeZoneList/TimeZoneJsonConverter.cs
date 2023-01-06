@@ -1,6 +1,8 @@
 ﻿// Copyright (c) True Goodwill. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+// removed this for targeting netstandard2.0 (I don't think it's used anywhere anyhow)
+#if NET
 namespace FFT.TimeZoneList
 {
   using System;
@@ -37,8 +39,6 @@ namespace FFT.TimeZoneList
       var id = _isWindows ? value.Id : TZConvert.IanaToWindows(value.Id);
       writer.WriteStringValue(id);
     }
-
-#pragma warning disable SA1508 // Closing braces should not be preceded by blank line
   }
-#pragma warning restore SA1508 // Closing braces should not be preceded by blank line
 }
+#endif
